@@ -1,0 +1,9 @@
+[Unit]
+Description=Qubes auto credit2 scheduling
+After=qubesd.service
+
+[Service]
+ExecStart=/usr/local/bin/auto_credit2.py
+
+[Install]
+WantedBy=multi-user.target
