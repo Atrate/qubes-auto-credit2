@@ -11,7 +11,7 @@ This script is designed for QubesOS. It makes use of the `credit2-weight` featur
 1. Download `auto-credit2.service` and `auto_credit2.py` and copy it over to `dom0`
 2. Inside `dom0` copy the service file to `/etc/systemd/system` and the Python script to `/usr/local/bin`
 3. Also inside `dom0`, execute `sudo chmod +x /usr/local/bin/auto_credit2.py; sudo systemctl daemon-reload && sudo systemctl
-   enable auto-credit2`.
+   enable --now auto-credit2`.
 4. For each VM whose scheduling priority you want to modify, execute (in `dom0`): `qvm-features VMNAME credit2-weight WEIGHT`
 
 The default `WEIGHT` is 256. Setting `WEIGHT` higher, e.g. to 512, will make the VM scheduled for execution 2x more often (if the CPU is completely busy and there's contention for resources). Setting `WEIGHT` lower makes the VM less likely to be scheduled.
