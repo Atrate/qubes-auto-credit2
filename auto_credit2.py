@@ -19,6 +19,9 @@ def sched_by_feat(vm, event, **kwargs):
             weight = int(vm.features["credit2-weight"])
             _sched_credit2(vm.name, str(weight))
             print(f'Set {vm.name}\'s credit2 weight to {weight}')
+            _sched_credit2(vm.name + '-dm', str(weight))
+            print(f'Set {vm.name + '-dm'}\'s credit2 weight to {weight}')
+
         except:
             pass
 
