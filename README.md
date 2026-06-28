@@ -19,10 +19,10 @@ The default `WEIGHT` is 256. Setting `WEIGHT` higher, e.g. to 512, will make the
 The script also sets `dom0`'s weight to `1024`, for improved performance.
 
 Weight recommendations:
-- `dom0`: 512 or 1024
-- `sys-audio`: 4096 or 8192
-- `gaming`: 2048
-- Any Qubes with video/audio calling: 2048 or 4096
+- `dom0`: `512` or `1024`
+- `sys-audio`: `4096` or `8192`
+- `gaming`: `2048`
+- Any Qubes with video/audio calling: `2048` or `4096`
 - Qubes running low-priority background processes: `64` or lower
 
 ## Credits
